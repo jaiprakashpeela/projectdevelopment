@@ -28,3 +28,5 @@ $ npm run test
 ```sh
 $ npm start server
 ```
+## Why to use GNU License?
+GNU license is the open source software license and free. Since we are using NodeJS. It allows us to use code in personal development. Also I can generate an patent .we cannot delete the copyright notice and original license from anyone version of the code.
