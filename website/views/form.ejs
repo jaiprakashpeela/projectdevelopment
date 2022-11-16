@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Online Shopping Electronics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+  <header>
+    <h1><u>1Stop Shopping</u></h1>
+    <h3>*apple product only *</h3>
+  </header>
+  <nav class="top_menu">
+     <ul>
+       <li>
+         <a href="#">Order Form</a>
+      </li>
+     </ul>
+  </nav>
+  <section class="onlineForm">
+    <form name="myform" method="Post" action="" >
+      <label>Iphone12 ($500)</label>
+      <input id="iphoneqty" placeholder="Max-5" type="text" name="iphoneqty"><br/>
+      <label>Macbook M2 chip ($1000)</label>
+      <input id="macbookqty" placeholder="Max-5" type="text" name="macbookqty"><br/>
+      <label>Airpod gen2 ($100)</label>
+      <input id="airpodqty" placeholder="Max-5" type="text" name="airpodqty"><br/>
+      <label>*--Personal info--*</label>
+      <br/><br/>
+      <label>Name</label>
+      <input id="name" placeholder="fullname" type="text" name="name"><br/>
+      <label>Address</address></label>
+      <input id="address" placeholder="Room No,StreetName" type="text" name="address"><br/>
+      <label>City</address></label>
+      <input id="city" placeholder="city name" type="text" name="city"><br/>
+      <label>Province</label>
+      <select name="province" id="province">
+          <option value="">----- Select -----</option>
+          <option value="ON">Ontario </option>
+          <option value="QU">Quebec </option>
+          <option value="BC">British Columbia </option>
+          <option value="NB">New Brunswick </option>
+      </select><br/>
+      <br/><br/>
+      <label>Phone</label>
+      <input id="phone" placeholder="5198201234" type="phone" name="phone"><br/>
+      <label>Email</label>
+      <input id="email" placeholder="email@domain.com" type="text" name="email"><br/>
+      
+      <br/><br/>
+
+      <input type="submit" value="Submit">
+      <p id="errors">
+        <% 
+            if(typeof(errors) != 'undefined'){
+              for(var error of errors){
+                %>
+                  <%= error.msg %> <br>
+                <%
+              }
+            }
+        %>
+
+      </p>
+    </form>  
+</section>
+<section class="onlineForm">
+  <div class="formData">
+    <p id="formResult">
+      
+      
+       <% 
+       if(typeof(itemsList) != 'undefined')
+       {%>
+         <%
+         if (itemsList.recipt != false )
+         {%>
+            <b>Recipt:</b> <br>
+            --------------------------------
+            <br>
+            <b>Name: </b> <%= userdata.name %> <br>
+            <b>Email: </b> <%= userdata.email %> <br>
+            <b>Phone: </b> <%= userdata.phone %> <br>
+            <b>Address: </b> <%= userdata.address %> , <%= userdata.city %> , <%= userdata.province %> <br>
+            <b>--------------------------------</b> <br>
+            <%
+              if (itemsList.iphone != 0){
+               %>
+               <b>Iphone 12: $ </b> <%= itemsList.iphone %> <br>
+              <%}%>
+            <%
+              if (itemsList.macbook !=0){
+                %>
+                <b>MacBook M2 : $ </b> <%= itemsList.macbook %> <br>
+              <%}%>
+            <%
+              if (itemsList.airpod !=0){
+                %>
+                <b>Airpod Gen2 : $ </b> <%= itemsList.airpod %> <br>
+              <%}%>
+                
+            <b>Tax: $ </b> <%= itemsList.tax %> <br>
+            <b>total cost: $ </b> <%= itemsList.totalCost %> <br>
+          <%
+          }%>
+          <%
+          if (itemsList.recipt == false)
+          {%>
+            <b>Please atleast one qty </b>
+          <%
+          } %> 
+        <%}%>
+    </p>
+    <button>
+      <a href="http://localhost:8080/orders"> Orders History</a>
+    </button>
+  </div>
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

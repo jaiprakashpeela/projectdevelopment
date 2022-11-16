@@ -1,0 +1,42 @@
+<!-- Jai Prakash peela-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Online Shopping Electronics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+  </head>
+  <body id = "allorder">
+    <nav class="head">
+      <h1><u>Order  History</u></h1>
+    </nav>
+    <section class="allorderSection">
+      <% for(var pageData of orders) 
+         { %>
+          <h2><u> Order <%=orders.indexOf(pageData) +1;%></u></h2>
+          <div class="oderdetails">
+            <h2>Reciept info</h2>
+            <p>
+              <% { %>
+              <b>Name: </b> <%= pageData.Name %> <br >
+              <b>Email: </b> <%= pageData.Email %> <br >
+              <b>Phone: </b> <%= pageData.Phone %> <br >
+              <b>Address: </b> <%= pageData.Address %> <br>
+              <b>Iphone 12: $ </b> <%= pageData.Iphone12 %> <br>
+              <b>MacBook M2 : $ </b> <%= pageData.MacBookM2 %> <br>
+              <b>Airpod Gen2 : $ </b> <%= pageData.AirpodGen2 %> <br>
+              <b>Tax: $ </b> <%= pageData.Tax %> <br>
+              <b>Total cost: $ </b> <%= pageData.Totalcost %> <br>
+              <% } %>
+              <br />
+            </p>
+          </div>
+      <% } %>
+      <button>
+        <a href="http://localhost:8080/"> Home Page</a>
+      </button>
+    </section>
+  </body>
+</html>
