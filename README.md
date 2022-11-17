@@ -18,14 +18,14 @@ once we install it we use MongoDb Compass which is an UI for MongoDb
 https://www.mongodb.com/try/download/compass
 select Download verison not the CLI
 ```
-### 2. Create an Database name assigment3
+## 2. Create an Database name "assigment3"
 ```sh
 As I have created an Database with name Assigment3 and using it in my project 
 ```
-```sh
-### Now pulling the Code from Git Repo 
-### 1. Clone the source code
-```
+
+## Now pulling the Code from Git Repo 
+## 1. Clone the source code
+
 ```sh
 $ git clone https://github.com/jaiprakashpeela/projectdevelopment.git
 $ cd website
