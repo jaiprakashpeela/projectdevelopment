@@ -18,9 +18,9 @@ once we install it we use MongoDb Compass which is an UI for MongoDb
 https://www.mongodb.com/try/download/compass
 select Download verison not the CLI
 ```
-## 2. Create an Database name "assigment3"
+## 2. Create an Database name "assigment4"
 ```sh
-As I have created an Database with name Assigment3 and using it in my project 
+As I have created an Database with name assigment4 and using it in my project 
 ```
 
 ## Now pulling the Code from Git Repo 
