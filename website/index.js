@@ -6,7 +6,8 @@ const bodyParser = require('body-parser')
 const {check, validationResult} = require('express-validator');
 const { Console } = require("console");
 const { match } = require('assert');
-// database conection
+
+// database conection with database name assignment4
 mongoose.connect("mongodb://localhost:27017/assignment4", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
